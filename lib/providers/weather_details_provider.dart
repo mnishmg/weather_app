@@ -10,13 +10,9 @@ class WeatherDetailsProvider with ChangeNotifier {
   bool isLoading = false;
   String errorMessage = '';
 
-  // WeatherDetailsModel? get weather => _weather;
-  // bool get isLoading => _isLoading;
-  // String get errorMessage => _errorMessage;
-
   Future<void> fetchWeather({String cityName = 'delhi'}) async {
     String urlEndpoint =
-        'weather?q=$cityName&units=metric&appid=e1e9d633b25ae4825c1060042f93b5c3';
+        'weather?q=$cityName&units=metric&appid=';
     isLoading = true;
     notifyListeners();
 

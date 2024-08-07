@@ -11,7 +11,7 @@ class WeatherForecastProvider extends ChangeNotifier {
 
   Future<void> fetchForecast({String cityName = 'delhi'}) async {
     String urlEndpoint =
-        'forecast?q=$cityName&cnt=5&units=metric&appid=e1e9d633b25ae4825c1060042f93b5c3';
+        'forecast?q=$cityName&cnt=5&units=metric&appid=';
     isLoading = true;
     notifyListeners();
 
