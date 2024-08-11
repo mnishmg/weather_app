@@ -12,11 +12,13 @@ import '../widgets/weather_forecast.dart';
 
 class HomePage extends StatefulWidget {
   @override
-  State<HomePage> createState() => _HomePageState(); // Create state for the HomePage.
+  State<HomePage> createState() =>
+      _HomePageState(); // Create state for the HomePage.
 }
 
 class _HomePageState extends State<HomePage> {
-  final _searchController = TextEditingController(); // Controller for the search field.
+  final _searchController =
+      TextEditingController(); // Controller for the search field.
 
   final DateTime now = DateTime.now(); // Current date and time.
 
@@ -35,7 +37,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F5), // Background color for the scaffold.
+      backgroundColor:
+          const Color(0xFFF5F5F5), // Background color for the scaffold.
       body: SafeArea(
         child: Column(
           children: [

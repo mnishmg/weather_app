@@ -132,10 +132,10 @@ class Weather {
 }
 
 class Main {
-  double? temp;
+  dynamic temp;
   double? feelsLike;
-  double? tempMin;
-  double? tempMax;
+  dynamic tempMin;
+  dynamic tempMax;
   int? pressure;
   int? humidity;
   int? seaLevel;
@@ -177,7 +177,7 @@ class Main {
 }
 
 class Wind {
-  double? speed;
+  dynamic speed;
   int? deg;
 
   Wind({this.speed, this.deg});

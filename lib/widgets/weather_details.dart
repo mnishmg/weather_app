@@ -5,11 +5,11 @@ import '../constants/constants.dart';
 
 class WeatherDetails extends StatelessWidget {
   // Weather details properties.
-  final double temp;
+  final dynamic temp;
   final String weather;
-  final double maxTemp;
-  final double minTemp;
-  final double windSpeed;
+  final dynamic maxTemp;
+  final dynamic minTemp;
+  final dynamic windSpeed;
 
   // Constructor for the WeatherDetails widget.
   const WeatherDetails({
@@ -24,7 +24,8 @@ class WeatherDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: appDefaultPadding * 2), // Vertical padding.
+      padding: const EdgeInsets.symmetric(
+          vertical: appDefaultPadding * 2), // Vertical padding.
       child: Column(
         children: [
           // Display current temperature.
@@ -36,7 +37,8 @@ class WeatherDetails extends StatelessWidget {
           // Display weather condition.
           Text(
             weather,
-            style: textStyle16(color: Colors.black, fontWeight: FontWeight.w700),
+            style:
+                textStyle16(color: Colors.black, fontWeight: FontWeight.w700),
           ),
           const SizedBox(
             height: appDefaultPadding, // Spacing between elements.
