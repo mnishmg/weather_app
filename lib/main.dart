@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:weather_app/pages/splash_page.dart';
 
 import 'pages/home_page.dart';
-import 'providers/weather_details_provider.dart';
-import 'providers/weather_forecast_provider.dart';
+import 'providers/forecast_provider.dart';
+import 'providers/weather_provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,11 +17,11 @@ class MyApp extends StatelessWidget {
       providers: [
         // Provides the WeatherDetailsProvider instance
         ChangeNotifierProvider(
-          create: (_) => WeatherDetailsProvider(),
+          create: (_) => WeatherProvider(),
         ),
         // Provides the WeatherForecastProvider instance
         ChangeNotifierProvider(
-          create: (_) => WeatherForecastProvider(),
+          create: (_) => ForecastProvider(),
         ),
       ],
       child: MaterialApp(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.grey,
           useMaterial3: false, // Uses Material 2 design components.
         ),
-        home: HomePage(),
+        home: SplashPage(),
       ),
     );
   }

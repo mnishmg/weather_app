@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/models/weather_forecast_model.dart';
 import '../services/api_services.dart';
 
-class WeatherForecastProvider extends ChangeNotifier {
+class ForecastProvider extends ChangeNotifier {
   WeatherForecastModel? forecast; // Variable to hold the weather forecast data.
   bool isLoading = false; // Variable to track the loading state.
   String errorMessage = ''; // Variable to hold any error messages.
